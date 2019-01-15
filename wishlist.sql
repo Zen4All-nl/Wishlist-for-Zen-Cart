@@ -29,18 +29,18 @@ INSERT IGNORE INTO admin_pages (page_key,language_key,main_page,page_params,menu
 #
 # avoid data loss when reinstall (this will give a table exists error)
 # if you want the table to be removed, then reinstalled; uncomment line below
-#DROP TABLE IF EXISTS `un_wishlists`;
-CREATE TABLE IF NOT EXISTS `un_wishlists` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `customers_id` int(11) NOT NULL,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `comment` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `default_status` int(1) NOT NULL,
-  `public_status` int(1) NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+#DROP TABLE IF EXISTS un_wishlists;
+CREATE TABLE IF NOT EXISTS un_wishlists (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  customers_id int(11) NOT NULL DEFAULT '0',
+  created datetime DEFAULT NULL,
+  modified datetime DEFAULT NULL,
+  name varchar(255) DEFAULT NULL,
+  comment varchar(255) DEFAULT NULL,
+  default_status int(1) NOT NULL DEFAULT '0',
+  public_status int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (id)
+) ENGINE=MyISAM;
 
 # --------------------------------------------------------
 #
@@ -54,15 +54,15 @@ CREATE TABLE IF NOT EXISTS `un_wishlists` (
 
 # avoid data loss when reinstall (this will give a table exists error)
 # if you want the table to be removed, then reinstalled; uncomment line below
-#DROP TABLE IF EXISTS `un_products_to_wishlists`;
-CREATE TABLE IF NOT EXISTS `un_products_to_wishlists` (
-  `products_id` int(11) NOT NULL,
-  `un_wishlists_id` int(11) NOT NULL,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  `quantity` int(2) NOT NULL,
-  `priority` int(1) NOT NULL,
-  `comment` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `attributes` varchar(255) CHARACTER SET utf8 NOT NULL,
-	 PRIMARY KEY  (`products_id`,`un_wishlists_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+#DROP TABLE IF EXISTS un_products_to_wishlists;
+CREATE TABLE IF NOT EXISTS un_products_to_wishlists (
+  products_id int(11) NOT NULL DEFAULT '0',
+  un_wishlists_id int(11) NOT NULL DEFAULT '0',
+  created datetime DEFAULT NULL,
+  modified datetime DEFAULT NULL,
+  quantity int(2) NOT NULL DEFAULT '0',
+  priority int(1) NOT NULL DEFAULT '0',
+  comment varchar(255) NOT NULL,
+  attributes varchar(255) NOT NULL,
+  PRIMARY KEY (products_id,un_wishlists_id)
+) ENGINE=MyISAM;
