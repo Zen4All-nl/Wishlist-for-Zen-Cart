@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 define('HEADING_TITLE', 'Wishlist');
 
@@ -15,5 +15,3 @@ define('ENTRY_CUSTOMER', 'Customer' . TEXT_DELIMITER);
 define('ENTRY_DEFAULT', 'Default' . TEXT_DELIMITER);
 define('ENTRY_PUBLIC', 'Public' . TEXT_DELIMITER);
 define('ENTRY_COMMENT', 'Comment' . TEXT_DELIMITER);
-
-?>
