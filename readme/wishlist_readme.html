@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  <meta name="ROBOTS" content="nofollow,noindex">  
+  <meta name="ROBOTS" content="noarchive">  
+  <meta http-equiv="pragma" content="no-cache">  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">  
+  <meta http-equiv="content-language" content="en">  
+  <meta name="description" content="Wishlist will allow your customers to put their favorite products on a wishlist">
+  <title>Wishlist 0.9</title>
+    
+  <link rel="stylesheet" type="text/css" href="includes/css/stylesheet.css">  
+  <script type="text/javascript" src="includes/jscript/jscript_tabs.js"></script></head><body>
+<div id="wrapper">
+<h2>Wishlist 0.9</h2>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="mascha@xs4all.nl">
+<input type="hidden" name="lc" value="NL">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+<input type="image" src="images/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<!--<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1">-->
+</form>
+
+<p>Support thread: <a href="http://www.zen-cart.com/forum/showthread.php?t=176649" target="_blank">http://www.zen-cart.com/forum/showthread.php?t=176649</a><br>
+Download link: <a href="http://www.zen-cart.com/index.php?main_page=product_contrib_info&products_id=1569" target="_blank">http://www.zen-cart.com/index.php?main_page=product_contrib_info&products_id=1569</a></p>
+
+<div id="slidetabsmenu" style="display: none;">
+<ul>
+  <li> <a onclick="expandcontent('sc1', this)" href="javascript:void(0)"><span>Purpose &amp; Aim</strong></a></li>
+  <li> <a onclick="expandcontent('sc2', this)" href="javascript:void(0)"><span>Installation</strong></a></li>
+  <li> <a onclick="expandcontent('sc3', this)" href="javascript:void(0)"><span>How to Use</strong></a></li>
+  <li> <a onclick="expandcontent('sc4', this)" href="javascript:void(0)"><span>Credits &amp; History</strong></a></li>
+  <li> <a onclick="expandcontent('sc5', this)" href="javascript:void(0)"><span>License</strong></a></li>
+</ul>
+</div>
+<br style="clear: both;">
+
+<!--Begin tabcontainer-->
+<div id="tabcontentcontainer">
+
+<!--Begin sc1-->
+<div class="tabcontent" id="sc1" style="display: block;">
+<div class="textcontent">
+<h3>PURPOSE &amp; AIM</h3>
+<p><strong>Wishlist</strong> is an module that will allow your customers to put their favorite products on a wishlist.
+They can also share the list(s) with friends by sending an email with the link to it.</p>
+
+
+<p>Version 0.9 adds attribute support<br>Version 0.8 fixes some bugs found related to new functionality.<br>
+**Update: Version 0.7 is a speeded release to fix problem with button to add to cart from the list.**<br>
+Version 0.6 is based on v0.5 of <strong>Wishlist</strong> but has been undergoing MAJOR modifications especially in the area
+of renaming files and fixing of minor yet annoying bugs</p>
+
+<p>If you are allready using a previous version of the wishlist v0.5 or lower, do read very carefully how to delete your files.</p>
+
+<p>If you are starting a clean install you should be ready to go in a matter of minutes!</p>
+
+<p>Wishlist v0.6 was tested for Zen Cart 1.3.9h and PHP 5.3. It may work on other versions (don't see why not) but this hasn't been tested yet</p> 
+
+<p>After following the installation instructions, you will need to read the "<strong>How to Use</strong>" section. There you may pick up some hints how you can integrate 
+<strong>Wishlist</strong> nicely into your site. (enable sidebox, create links to wishlist module in core-files)</p>
+
+
+<h3>Wish list (these changes are on the wishlist wanted list :))</h3>
+<div class="regularlist">
+<ul>
+<li>The "category filter" only grabs products in the immediate category. It will not grab products in subcategories to the selected category.</li>
+
+<li>add check to include attributes when products are added to the wishlist -- done!</li>
+<li>add possibility to move product from cart to wishlist</li>
+<li>quantity is not transferred from product page to wishlist (it defaults to 1)</li>
+<li>quantity is not transfered from wishlist to cart (thats probably ok)</li>
+<li>adding multiple items in compact view will allow products that need an attribute to 
+	be added to the cart without it (with possible unexpected behaviour) !workaround available
+	via admin; disallow multiple products add for now if your store uses atributes.</li>
+<li>wishlists details in admin may show incorrect pricing</li>
+<li>make a wishlist for non-registered users</li>
+<li>the same product in more wishlists</li>
+<li>look at css to be more standard blend into existing sites.</li>
+</ul>
+</div>
+
+
+
+<p>Ready to get started? Just follow the installation instructions.</p>
+
+<p>Any questions, use the forum: <a href="http://www.zen-cart.com/forum/showthread.php?t=176649" target="_blank">http://www.zen-cart.com/forum/showthread.php?t=176649</a></p>
+
+
+</div>
+</div>
+<!--End sc1-->
+
+<!--Begin sc2-->
+<div class="tabcontent" id="sc2" style="display: block;">
+<div class="textcontent">
+<h3>INSTALLATION</h3>
+
+<p><b>!!!!!BACKUP YOUR STORE BEFORE YOU BEGIN!!!!!</b></p>
+<p>There are THREE folders in the fileset</p>
+
+<div class="regularlist">
+<ul>
+	<li>readme (you allready found it, good)</li>
+	<li>admin</li>
+	<li>includes</li>
+</ul>
+</div>
+
+<p><b>Note: If you have a version 0.5 or older, you will need to delete the files that were installed with this version<br />
+Do not start the installation if such an older installation exists. Look at the uninstall instructions below if this applies to your situation.</b></p>
+
+<div class="regularlist">
+<strong><u>Basic Installation Instructions</u></strong>
+<ol>
+ <li> -----[ 1. Create tables ]-----
+
+Run 'wishlist.sql' in the Install SQL patches in the Zen Cart admin.
+
+Important: If you use a database table prefix (see file "includes/configure.php", line 52), and you want to install the tables directly via phpadmin 
+then ammend the statements as they should be.
+Running the install file via the zen cart sql patches tool within zen-cart works fine without amendments and is preferred.
+</li>
+<li>
+-----[ 2. Upload ]-----
+
+Rename the "admin" folder to the name of your admin folder.
+Rename the "includes/templates/YOUR_ZEN_TEMPLATE" folder to the name of your template.
+
+Upload the files found in the "includes" directory of this distribution to their corresponding location of your ZenCart implementation.
+The same for the files in the renamed admin folder 
+</li>
+<li>
+-----[ 3. Insert button on product page ]-----
+
+In the includes\templates\YOUR_ZEN_TEMPLATE\templates you will find an example file which includes an example of how you could integrate a button on your products page.
+You need to ammend your original tpl_product_info_display.php.
+Put the code whereever you would like the wish button to appear but be aware it need to be within the form cart_quantity to include attributes.
+
+(also see HINTS to find out how you can add a link in your header toolbar)
+</li>
+<li>
+-----[ 4. Activate sidebox (optional) ]-----
+
+If you would like the sidebox, then...
+Login to the ZenCart admin. Select "Tools -> Layout Boxes Controller". Select "sideboxes/wishlist.php" in the box list. Turn "Column Status" ON. Save changes.
+<strong>Important! the sidebox does NOT include support for attributes. from this version onwards i would discourage use of this sidebox</strong>
+the sidebox may return with improved code but at this time i would recommend only using a link in your product page
+</li>
+<li>
+-----[ 5. side specific css/formats (optional) ]-----
+
+you will want to match the add to wish list button to match your site
+edit includes\templates\YOUR_ZEN_TEMPLATE\buttons\english (or your language folder)
+to match in a button that is used on your site
+
+also look at includes\templates\YOUR_ZEN_TEMPLATE\css\style_un_classic.css
+if you don't like the layouts in this contribution edit to match your site's layout
+</li>
+</ol>
+</div>
+
+<div class="regularlist">
+<strong><u>Upgrading from previous versions of Wishlist</u></strong>
+<ol>
+  <li>There is no upgrade path if you are using version 0.5 or older</li>
+  <li>You will need to uninstall the older distribution before you can install version 0.6</li>
+  <li>However: you will not loose the existing data about the wishlists which are stored in the database. 
+  After deinstalling/installing v0.6 all wishlist will be available again to your customers</li>
+  <li>version 0.9 adds an extra column to the wishlist products table, this column will be empty for existing wishlists.</li>
+</ol>
+</div>
+
+<div class="regularlist">
+<strong><u>Uninstall instructions</u></strong>
+<p>If you have installed <strong>wishlist version 0.5 or earlier</strong> you will need to remove the files listed below</p>
+<ul>
+remove files and folders in includes if they exist:
+<li>includes\functions\extra_functions\un_general.php</li>
+<li>includes\functions\extra_functions\un_html_output.php</li>
+<li>includes\extra_datafiles\un_database_tables.php</li>
+<li>includes\extra_datafiles\un_wishlist_filenames.php</li>
+<li>includes\extra_cart_actions\un_wishlist.php</li>
+<li>includes\classes\un_productlist.class.php</li>
+<li>includes\classes\un_wishlist.class.php</li>
+<li>includes\languages\english\extra_definitions\un_defines.php <-- do this for each language folder if it exists but keep the files (they can be renamed/reused)</li>
+<li>includes\languages\english\... 6 files that start with un_wishlist <-- do this for each language folder if it exists but keep the files (they can be renamed/reused)</li>
+<li>includes\modules\sideboxes\un_wishlist.php</li>
+<li>includes\modules\pages\... 6 folders that start with un_wishlist - delete all 6 including their contents</li>
+<li>includes\templates\template_default\... 6 folders that start with un_wishlist - delete all 6 including their contents</li>
+<li>includes\templates\template_default\sideboxes\tpl_un_wishlist.php</li>
+
+you should check your <custom_template_folder> and check if the folders starting with un_wishlist are there, if so, remove. 
+
+
+remove files in admin if they exist:
+
+<li>&lt;admin&gt;\includes\functions\extra_functions\un_general.php</li>
+<li>&lt;admin&gt;\includes\boxes\extra_boxes\un_wishlist_extras_dhtml.php</li>
+<li>&lt;admin&gt;\includes\extra_datafiles\un_database_tables.php</li>
+<li>&lt;admin&gt;\includes\extra_datafiles\un_wishlist_filenames.php</li>
+
+<li>&lt;admin&gt;\includes\classes\un_productlist.class.php</li>
+<li>&lt;admin&gt;\includes\classes\un_wishlist.class.php</li>
+<li>&lt;admin&gt;\includes\languages\un_wishlist.php</li>
+<li>&lt;admin&gt;\includes\languages\un_wishlists.php</li>
+<li>&lt;admin&gt;\includes\languages\extra_definitions\un_wishlist.php</li>
+<li>&lt;admin&gt;\un_wishlist.php</li>
+<li>&lt;admin&gt;\un_wishlists.php</li>
+</ul>
+
+<strong><u>Database Modifications</u></strong>
+<ul>
+	<li>Only use the unistall.sql if you are using version 0.6. You will need to manually unescape the tables for the user data if you want to drop these, but this is not recommended or needed in any case.</li>
+	<li>if you have an error in the sidebox controller about sidebox does not exist run this query in your sql patch tool: delete from layout_boxes where layout_box_name = 'un_wishlist.php';</li>
+	<li>for versions 0.6 to 0.8 you may want to only add the column for attributes support, you may choose to only use the alter table command listed in the sql install file</li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--End sc2-->
+
+<!--Begin sc3-->
+<div class="tabcontent" id="sc3" style="display: block;">
+<div class="textcontent">
+<h3>HOW TO USE</h3>
+<p>After the install, altough the module is enabled by default you will see no changes in your store front.</p>
+<p>This is because you will most likely want to place files next to other buttons that are in use and these edits are all in zen-cart core files which
+we donot want to overwrite for obvious reasons. If you want a quick look and feel of the module, go inside your <strong>layout boxes controller</strong> and enable the sidebox.
+It will only show on pages with a product and contains a link to the wishlist page in the header by default.</p>
+<p>Be aware that the sidebox is not supporting attributes and the sidebox may be removed (or improved) in future versions. Using sidebox on live site is not recommended at this time.</p>
+
+<p><strong><u>Admin Options</u></strong></p>
+This version includes an admin option to enable/disable the module and more.
+Look for "Wish list" under the configuration menu of your store to look at the available options.
+The default settings should be good for most store setups.
+
+<p><strong><u>To include an "Add to Wish List" link on a product template</u></strong></p>
+<br>
+&lt!--bof Wishlist button --><br>
+&lt!--&ltbr class="clearBoth" /><br> 
+optional depending where the code is added--><br>
+<br>
+&lt?php if (UN_MODULE_WISHLISTS_ENABLED) {<br> 
+			if	( $_SESSION['customer_id'] ) {<br>
+            	echo '&ltdiv id="productWishlistLink" class="buttonRow back">';<br>
+            	echo zen_image_submit(UN_BUTTON_IMAGE_WISHLIST_ADD, UN_BUTTON_WISHLIST_ADD_ALT, 'name="wishlist" value="yes"');<br> 
+            	echo '&lt/div>';<br>
+        	} else {<br>
+	        	echo '&ltdiv>';<br>
+				echo UN_BOX_WISHLIST_LOGIN_TEXT;<br>
+				echo '&lt/div>';<br>
+        	}<br>
+		 } else {}<br> 
+		 ?><br>
+&lt!--eof Wishlist button --&gt<br>
+<br>
+<p><strong><u>To include an "Add to Wish List" link on a non-product template, try this (replace YOUR_PRODUCTS_ID with a valid product id):</u></strong></p>
+<br>
+&lt;?php<br> 
+// start wishlist link<br>
+if (UN_MODULE_WISHLISTS_ENABLED) {<br>
+echo '&lt;a href="' . zen_href_link(UN_FILENAME_WISHLIST, 'products_id=' . YOUR_PRODUCTS_ID . '&action=wishlist_add_product') . '">' . UN_TEXT_ADD_WISHLIST . '&lt;/a>';<br>
+}<br>
+// end wishlist link<br>
+?><br>
+<br>
+<p><strong><u>To include a "Wish List" link in the template header</u></strong></p>
+<br>
+&lt;?php if (UN_MODULE_WISHLISTS_ENABLED) { ?><br>
+&lt;a href="<?php echo zen_href_link(UN_FILENAME_WISHLIST, '', 'SSL'); ?>">&lt;?php echo UN_HEADER_TITLE_WISHLIST; ?>&lt;/a><br>
+&lt;?php } else {} ?><br>
+<strong>(see also the example file in the contribution /includes/templates/YOUR_TEMPLATE/common/EXAMPLEtpl_header.EXAMPLE)</strong><br>
+<br>
+<br>
+
+
+
+
+
+</div>
+
+</div>
+</div>
+<!--End sc3-->
+
+<!--Begin sc4-->
+<div class="tabcontent" id="sc4" style="display: block;">
+<div class="textcontent">
+<h3>CREDITS &amp; HISTORY</h3>
+Based on Wishlists v0.5 and onwards<br>
+<br>
+v0.9 Updated by<br>
+Jeroen Veeren<br>
+tested on zen-cart 1.3.9h with php 5.3<br>
+<br>
+<br>
+v0.9 - end of April - 2011
+<ul>
+<li>attribute support added</li>
+<li>update modules/pages/product_info/main_template_vars.php is obsolete, related to the sidebox which is now unrecommended</li> 
+</ul>
+<br>
+v0.8 - April - 2011
+<ul>
+<li>update modules/pages/product_info/main_template_vars.php if (empty($pr_attr)) require(DIR_WS_MODULES . zen_get_module_directory(FILENAME_ATTRIBUTES));</li>
+<li>fixed function to not allow adding product without login</li> 
+</ul>
+<br>
+v0.7 - March - 2011
+<ul>
+<li>fixed button to allow products to be moved from list to cart</li> 
+<li>minor adjustments to language values</li>
+<li>changes to forms to support ssl</li>
+</ul>
+<br>
+v0.6 - March/2011<br>
+<ul> 
+	<li>moved template files to correct directory to avoid errors like google_analytics includes or other template related issues</li>
+	<li>renamed tpl_product_info_display.php to EXAMPLEtpl_product_info_display.EXAMPLE to avoid overwrite core file</li>
+	<li>added example page for showing wishlist in header.php</li>
+	<li>fixed price from: not shown when not applicable</li>
+	<li>default images on extended list view are shown in small format of store</li>
+	<li>Added DB_PREFIX to database table definitions (AGAIN v0.41!)</li>
+	<li>renamed filenames so pages wont appaer as un_wishlist.php and so on in the URL bar.</li>
+	<li>added items todo for next version in readme</li>
+	<li>changed hard coded text in several files to defines in language files, now ready for multiple languages!</li>
+	<li>added option to change default listname in admin</li>
+	<li>implemented option to switch module on/off in admin</li>
+	<li>implemented more options in admin to control features in the wish list</li>
+	<li>added unistall.sql to easily undo changes in the database</li>
+	<li>added back button to several pages for better navigation</li>
+	<li>added option to stay on product page when product is added (instead of showing the list)</li>
+	<li>changed max products for extended/compact views into admin config options</li>
+	<li>sidebox title is now optional link to the wish list page</li>
+	<li>wishlist default the view to the "compact" or "extended" from admin.</li>
+	<li>sold out products or call for price are now showing correct button in wish list (extended view)</li>
+	<li>added admin control to disable the option to add multiple products at once in compact view. (to avoid problems with atributes)</li>
+	<li>fixed bug that would direct to search form when clicking on 2nd page link of friends list.</li>
+</ul><br><br>
+PREVIOUS VERSION HISTORY:<br>
+===========================================<br>
+<br>
+v0.5  - ZenCart Forum & JT Website Design<br>
+	* Tested to work in ZenCart 1.3.8<br />
+	* Changed some text and other definitions for better plug-n-play<br />
+v0.41 - Fix<br />
+	* Added DB_PREFIX to database table definitions<br />
+v0.4  - Major Revision<br />
+	* Compatible with ZenCart 1.3.7<br />
+v0.31 - Fix<br />
+	* Fixed bug concerning drop-down filters on friend's wishlist<br />
+	* Refined admin interface<br />
+v0.3  - Major Revision<br />
+	* Added admin capabilities<br />
+v0.23 - Fix<br />
+	* Links from wishlist to product page respect product type<br />
+v0.22 - Fix<br />
+	* Added check on products id to address shopping cart link issue<br />
+	* Altered sidebox to force products id to be integer to address shopping cart link issue<br />
+v0.21 - Fix <br />
+  * Removed session id from Tell a Friend email link<br />
+  * Added UN_DISPLAY_CATEGORY_FILTER<br />
+  * Added UN_HEADER_TITLE_WISHLIST and usage hint in this readme<br />
+v0.2 - Major Revision <br />
+  * Support multiple wishlists per user<br />
+  * Interact with wishlist database tables through wishlist class<br />
+v0.1 - Initial version created in November 2004<br />
+Initial version author unknown but it was probably somebody related to www.unevolutions.com<br>
+
+
+</div>
+</div>
+<!--End sc4-->
+
+<!--Begin sc5-->
+<div class="tabcontent" id="sc5" style="display: block;">
+<div class="textcontent">
+<h3>LICENSE</h3>
+<p>This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.</p>
+
+<p>This script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<p>Always backup your shop and database before making changes.</p>
+</div>
+</div>
+<!--End sc5-->
+
+</div>
+<!--end tabcontainer-->
+<script type="text/javascript">document.getElementById('sc2').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc3').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc4').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc5').style.display = 'none';</script>
+<script type="text/javascript">ShowTabs()</script>
+<script type="text/javascript">
+// We only show the tab links if JavaScript is available/active.
+<!--
+if (document.getElementById("slidetabsmenu") != null) {
+  document.getElementById('slidetabsmenu').style.display = "block";
+}
+//-->
+</script><br>
+<br>
+<p><a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://www.w3.org/Icons/valid-html401-blue.gif" alt="W3C validation logo" border="0" height="31" width="88"></a> <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" border="0" height="31" width="88"></a></p>
+<br>
+<br>
+</div>
+
+</body></html>
